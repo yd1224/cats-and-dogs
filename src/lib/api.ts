@@ -63,6 +63,6 @@ export const getBreedPresentators = (
 ): Promise<CatImageResponse[]> => {
   const url = `${
     breed === "cat" ? CAT_API_BASE_URL : DOG_API_BASE_URL
-  }images/search?limit=10&page=${page}&breed_ids=${id}&api_key=live_Hjl36AyfFsb5S7et5OQMuTt1IAknJrklpbOeOQWMBtqxkC9XQyrLc28Nq58UeRax`;
+  }images/search?limit=10&page=${page}&breed_ids=${id}`;
   return sendRequest<CatImageResponse[]>(url);
 };
